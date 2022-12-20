@@ -9,8 +9,8 @@ async def start_handler(message: types.Message):
     await bot.send_message(chat_id=message.chat.id,
                            text=f"Салам хозяин {message.from_user.first_name}",
                            reply_markup=start_markup)
-    # await message.answer("This is an answer method")
-    # await message.reply("This is a reply method")
+    await message.answer("This is an answer method")
+    await message.reply("This is a reply method")
 
 
 async def info_handler(message: types.Message):

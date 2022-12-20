@@ -1,6 +1,6 @@
 from aiogram import types, Dispatcher
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from config import bot, dp
+from config import bot
 
 
 # @dp.callback_query_handler(text="button_call_1")
