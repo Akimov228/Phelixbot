@@ -2,7 +2,7 @@ from aiogram import types, Dispatcher
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from config import bot, dp
 from Keyboards.client_kb import start_markup
-from Parser.parsing_of_site import *
+from Parser.parsing import Parser
 # from Database.bot_db import sql_command_random
 
 
@@ -61,7 +61,7 @@ async def pin_message(message: types.Message):
     await bot.pin_chat_message(message.chat.id, message.message_id)
 
 async def get_crypto(message: types.Message):
-    crypto = parser()
+    crypto = Parser.parser()
     for i in crypto:
         await message.answer(
             f"{i['title']}\n\n"
